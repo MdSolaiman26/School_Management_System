@@ -15,6 +15,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Main App Routes
+app.use('/api/auth', require('./routes/authRoutes'));
+
 // Basic route
 app.get('/', (req, res) => {
   res.send('School Management System API is running');
